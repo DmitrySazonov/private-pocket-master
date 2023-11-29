@@ -75,8 +75,11 @@
                 [#if record.title??]
                      <h6>${record.title}</h6>
                 [/#if]
-                <td><a class="btn btn-sm btn-warning" role="button"
-                						href="/${pocket}/${record.id}">Delete</a></td>
+                <td>
+                    <form action="/${pocket}/${record.id}" method="POST">
+                    <button class="btn btn-sm btn-warning" type="submit">Delete</button>
+                    </form>
+                </td>
             </td>
         </tr>
         [/#list]

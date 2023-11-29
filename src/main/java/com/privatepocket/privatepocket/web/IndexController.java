@@ -35,7 +35,7 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping(value = "/{pocket}/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{pocket}/{id}", method = RequestMethod.POST)
     public View pocketDelete(@PathVariable String pocket, @PathVariable String id, Model model) {
         service.deleteRecord(id);
         return new RedirectView("/{pocket}");
