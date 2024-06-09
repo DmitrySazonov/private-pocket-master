@@ -55,6 +55,10 @@ public class RecordStorageService {
         return pocketsCountMap;
     }
 
+    public List<Record> getAllRecords() {
+        return recordRepository.findAllByRecordTypeOrderByRepositoryAscCreateDateAsc(RecordType.URL);
+    }
+
     private String getTitleFromUrl(String url) throws IOException {
         try {
             if (isValidURL(url)) {

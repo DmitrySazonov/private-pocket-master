@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface RecordRepository extends JpaRepository<Record, String> {
     List<Record> findByRepositoryOrderByCreateDate(String repository);
+    List<Record> findAllByRecordTypeOrderByRepositoryAscCreateDateAsc(RecordType recordType);
 }
